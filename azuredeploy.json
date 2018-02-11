@@ -30,6 +30,21 @@
                     "contentVersion": "1.0.0.0"
                 }
             }
+        },
+		{
+            "apiVersion": "2017-05-10",
+            "name": "endpoint_vm",
+            "type": "Microsoft.Resources/deployments",
+			"dependsOn": [
+                "vsec_single_gateway"
+            ],
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "https://raw.githubusercontent.com/navalev/checkpoint-workshop/master/endpoint_vm.json",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
         }
     ]
 }
