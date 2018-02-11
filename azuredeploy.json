@@ -20,6 +20,9 @@
             "apiVersion": "2017-05-10",
             "name": "vsec_management",
             "type": "Microsoft.Resources/deployments",
+			"dependsOn": [
+                "vsec_single_gateway"
+            ],
             "properties": {
                 "mode": "incremental",
                 "templateLink": {
