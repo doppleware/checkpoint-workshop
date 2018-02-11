@@ -179,6 +179,7 @@
     }
   },
   "variables": {
+  "virtualNetworkExistingRGName" : "[resourceGroup()]",
     "templateName": "management",
     "templateVersion": "20170903",
     "location": "[parameters('location')]",
@@ -308,7 +309,10 @@
           },
           "vnetNewOrExisting": {
             "value": "[parameters('vnetNewOrExisting')]"
-          }
+          },
+		  "virtualNetworkExistingRGName": {
++            "value": "[variables('virtualNetworkExistingRGName')]"
++         }
         }
       }
     },
