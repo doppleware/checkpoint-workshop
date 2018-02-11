@@ -179,7 +179,7 @@
     }
   },
   "variables": {
-  "virtualNetworkExistingRGName" : "[resourceGroup()]",
+  "virtualNetworkExistingRGName" : "[resourceGroup().name]",
     "templateName": "management",
     "templateVersion": "20170903",
     "location": "[parameters('location')]",
