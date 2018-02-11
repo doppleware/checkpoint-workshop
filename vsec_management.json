@@ -310,11 +310,11 @@
           "vnetNewOrExisting": {
             "value": "[parameters('vnetNewOrExisting')]"
           },
-		  "virtualNetworkExistingRGName": {
-+            "value": "[variables('virtualNetworkExistingRGName')]"
-+         }
-        }
+          "virtualNetworkExistingRGName" : {
+              "value" : "[variables('virtualNetworkExistingRGName')]"
+          }
       }
+    }
     },
     {
       "type": "Microsoft.Network/publicIPAddresses",
