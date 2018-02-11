@@ -308,9 +308,6 @@
           },
           "vnetNewOrExisting": {
             "value": "[parameters('vnetNewOrExisting')]"
-          },
-          "virtualNetworkExistingRGName": {
-            "value": "[resourceGroup()]"
           }
         }
       }
