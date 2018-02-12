@@ -4,26 +4,17 @@
     "parameters": {},
     "variables": {},
     "resources": [
-        {
-            "apiVersion": "2017-05-10",
-            "name": "network_setup",
-            "type": "Microsoft.Resources/deployments",
-            "properties": {
-                "mode": "incremental",
-                "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/navalev/checkpoint-workshop/master/network_setup.json",
-                    "contentVersion": "1.0.0.0"
-                }
-            }
-        },
-	    {
+	{
             "apiVersion": "2017-05-10",
             "name": "vsec_single_gateway",
             "type": "Microsoft.Resources/deployments",
+<<<<<<< HEAD
             "dependsOn": [
                 "network_setup",
 		"vsec_management"
             ],
+=======
+>>>>>>> parent of 771ebbc... seperate network setup
             "properties": {
                 "mode": "incremental",
                 "templateLink": {
@@ -37,7 +28,7 @@
             "name": "vsec_management",
             "type": "Microsoft.Resources/deployments",
 			"dependsOn": [
-                "network_setup"
+                "vsec_single_gateway"
             ],
             "properties": {
                 "mode": "incremental",
@@ -51,10 +42,15 @@
             "apiVersion": "2017-05-10",
             "name": "endpoint_vm",
             "type": "Microsoft.Resources/deployments",
+<<<<<<< HEAD
 	    "dependsOn": [
                 "network_setup",
 		"vsec_management",
 		"vsec_management"
+=======
+			"dependsOn": [
+                "vsec_single_gateway"
+>>>>>>> parent of 771ebbc... seperate network setup
             ],
             "properties": {
                 "mode": "incremental",

@@ -127,7 +127,7 @@
         },
         "vnetNewOrExisting": {
             "type": "string",
-            "defaultValue": "existing",
+            "defaultValue": "new",
             "allowedValues": [
                 "new",
                 "existing"
@@ -135,7 +135,14 @@
             "metadata": {
                 "Description": "Indicates whether the virtual network is new or existing"
             }
-        },       
+        },
+        "virtualNetworkExistingRGName": {
+            "type": "string",
+            "metadata": {
+                "description": "Resource Group of the existing virtual network"
+            },
+            "defaultValue": ""
+        },
         "managementGUIClientNetwork": {
             "type": "string",
             "metadata": {
@@ -219,7 +226,6 @@
         }
     },
     "variables": {
-        "virtualNetworkExistingRGName" : "[resourceGroup().name]",
         "templateName": "single",
         "templateVersion": "20170903",
         "location": "[parameters('location')]",
@@ -388,7 +394,7 @@
                         "value": "[parameters('vnetNewOrExisting')]"
                     },
                     "virtualNetworkExistingRGName": {
-                        "value": "[variables('virtualNetworkExistingRGName')]"
+                        "value": "[parameters('virtualNetworkExistingRGName')]"
                     }
                 }
             }
