@@ -9,13 +9,10 @@
             "name": "vsec_single_gateway",
             "type": "Microsoft.Resources/deployments",
 <<<<<<< HEAD
-<<<<<<< HEAD
             "dependsOn": [
                 "network_setup",
 		"vsec_management"
             ],
-=======
->>>>>>> parent of 771ebbc... seperate network setup
 =======
 >>>>>>> parent of 771ebbc... seperate network setup
             "properties": {
@@ -53,9 +50,6 @@
 =======
 			"dependsOn": [
                 "vsec_single_gateway"
-<<<<<<< HEAD
->>>>>>> parent of 771ebbc... seperate network setup
-=======
 >>>>>>> parent of 771ebbc... seperate network setup
             ],
             "properties": {
