@@ -64,7 +64,7 @@
         },
         "sicKey": {
             "type": "securestring",
-			"defaultValue": "Checkpoint1234",
+			"defaultValue": "CheckPoint1234",
             "metadata": {
                 "description": "One time key for Secure Internal Communication"
             }

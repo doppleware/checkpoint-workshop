@@ -21,7 +21,7 @@
             "metadata": {
                 "description": "Default Admin password"
             },
-			"defaultValue" : "Checkpoint1234"
+			"defaultValue" : "CheckPoint1234"
         },
         "storageAccountType": {
             "type": "string",
