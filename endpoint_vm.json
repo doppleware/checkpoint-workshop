@@ -37,7 +37,8 @@
     },
     "variables": {
 		"existingVirtualNetworkName" : "onPrem",
-		"existingSubnetName" : "Internal",
+        "existingSubnetName" : "Internal",
+        "privateIPAddress": "10.0.2.5",
 		"vnetID": "[resourceId(resourceGroup().name, 'Microsoft.Network/virtualNetworks', variables('existingVirtualNetworkName'))]",
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/', variables('existingSubnetName'))]",
         "virtualMachineName": "OnPremClient",		
@@ -128,7 +129,8 @@
                             "subnet": {
                                 "id": "[variables('subnetRef')]"
                             },
-                            "privateIPAllocationMethod": "Dynamic",
+                            "privateIPAllocationMethod": "Static",
+                            "privateIPAddress": "[variables('privateIPAddress')]",
                             "publicIpAddress": {
                                 "id": "[resourceId('Microsoft.Network/publicIpAddresses', variables('publicIpAddressName'))]"
                             }
@@ -147,7 +149,7 @@
             "location": "[resourceGroup().location]",
             "comments": "Public IP for your Primary NIC",
             "properties": {
-                "publicIpAllocationMethod": "Dynamic"
+                "publicIpAllocationMethod": "Dynamic"                
             }
         },
         {
