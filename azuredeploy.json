@@ -21,8 +21,7 @@
             "name": "vsec_single_gateway",
             "type": "Microsoft.Resources/deployments",
             "dependsOn": [
-                "network_setup",
-		"vsec_management"
+                "network_setup"
             ],
             "properties": {
                 "mode": "incremental",
@@ -51,10 +50,8 @@
             "apiVersion": "2017-05-10",
             "name": "endpoint_vm",
             "type": "Microsoft.Resources/deployments",
-	    "dependsOn": [
-                "network_setup",
-		"vsec_management",
-		"vsec_management"
+			"dependsOn": [
+                "network_setup"
             ],
             "properties": {
                 "mode": "incremental",
