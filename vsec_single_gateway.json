@@ -25,7 +25,7 @@
         },
         "adminPassword": {
             "type": "securestring",
-			"defaultValue" : "CheckPoint1234",
+			"defaultValue" : "Checkpoint1234",
             "metadata": {
                 "description": "Administrator password"
             }          
@@ -64,7 +64,7 @@
         },
         "sicKey": {
             "type": "securestring",
-			"defaultValue": "CheckPoint1234",
+			"defaultValue": "Checkpoint1234",
             "metadata": {
                 "description": "One time key for Secure Internal Communication"
             }
