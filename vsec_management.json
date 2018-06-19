@@ -176,10 +176,17 @@
       "defaultValue": {
         "provider": "30DE18BC-F9F6-4F22-9D30-54B8E74CFD5F"
       }
-    }
+    },
+         "virtualNetworkExistingRGName": {
+            "type": "string",
+            "metadata": {
+                "description": "Resource Group of the existing virtual network"
+            },
+            "defaultValue": ""
+        }
   },
   "variables": {
-  "virtualNetworkExistingRGName" : "[resourceGroup().name]",
+  "virtualNetworkExistingRGName" : "[parameters('virtualNetworkExistingRGName')]",
     "templateName": "management",
     "templateVersion": "20170903",
     "location": "[parameters('location')]",
